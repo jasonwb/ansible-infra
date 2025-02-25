@@ -2,12 +2,12 @@
 2. Test the connection from Ansible Master:
 
 
-ansible -i inventory/hosts.ini all -m ping
+   ansible -i inventory/hosts.ini all -m ping
 
 Clone the repository
 
-git clone https://github.com/jasonwb/ansible-infra.git
-cd ansible-infra
+   git clone https://github.com/jasonwb/ansible-infra.git
+   cd ansible-infra
 
 Modify inventory & playbooks as needed
 
@@ -16,4 +16,4 @@ Modify inventory & playbooks as needed
 
 Run Ansible Playbook
 
-ansible-playbook -i inventory/hosts.ini playbooks/setup.yml
+   ansible-playbook -i inventory/hosts.ini playbooks/setup.yml
