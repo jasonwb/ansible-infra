@@ -1,51 +1,19 @@
-# Ansible Infrastructure Repository Structure
+1. Update the file with your actual IPs & username.
+2. Test the connection from Ansible Master:
 
-ansible-infra/
 
-│── inventory/
-│   ├── hosts.ini
+ansible -i inventory/hosts.ini all -m ping
 
-│── roles/
-│   ├── webserver/     # Nginx setup
+Clone the repository
 
-│   │   ├── tasks/
-│   │   │   ├── main.yml   # Main tasks for installing & configuring Nginx
+git clone https://github.com/jasonwb/ansible-infra.git
+cd ansible-infra
 
-│   │   ├── handlers/
-│   │   │   ├── main.yml           # Restart Nginx if config changes
+Modify inventory & playbooks as needed
 
-│   │   ├── templates/
-│   │   │   ├── nginx.conf.j2      # Jinja2 template for Nginx config
+   1.  Add your server IPs to hosts.ini.
+   2.  Adjust setup.yml to match your automation needs.
 
-│   │   ├── files/
-│   │   │   ├── index.html         # Default HTML file for testing
+Run Ansible Playbook
 
-│   │   ├── vars/
-│   │   │   ├── main.yml           # Variables for the role (optional)
-
-│   │   ├── defaults/
-│   │   │   ├── main.yml           # Default values (optional)
-
-│   │   ├── meta/
-│   │   │   ├── main.yml           # Role metadata (optional)
-│   │   ├── README.md              # Documentation for this role
-
-│   ├── database/      # MySQL setup
-│   │   ├── tasks/
-│   │   │   ├── main.yml           # Install MySQL and configure database
-
-│   ├── monitoring/    # Logging & monitoring setup
-│   │   ├── tasks/
-│   │   │   ├── main.yml           # Install Prometheus & Node Exporter
-
-│── playbooks/         # Ansible playbooks
-
-│   ├── setup.yml      # Main playbook
-│   ├── web.yml        # Configures web01
-│   ├── db.yml         # Configures db01
-│   ├── monitoring.yml # Configures monitor01
-
-│── group_vars/        # Variables for each server group
-│   ├── all.yml        # Global vars
-│── ansible.cfg        # Ansible config file
-│── README.md          # Project documentation
+ansible-playbook -i inventory/hosts.ini playbooks/setup.yml
