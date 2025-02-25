@@ -4,16 +4,22 @@ ansible-infra/
 
 │── inventory/
 │   ├── hosts.ini
+
 │── roles/
 │   ├── webserver/     # Nginx setup
+
 │   │   ├── tasks/
-│   │   │   ├── main.yml           # Main tasks for installing & configuring Nginx
+│   │   │   ├── main.yml   # Main tasks for installing & configuring Nginx
+
 │   │   ├── handlers/
 │   │   │   ├── main.yml           # Restart Nginx if config changes
+
 │   │   ├── templates/
 │   │   │   ├── nginx.conf.j2      # Jinja2 template for Nginx config
+
 │   │   ├── files/
 │   │   │   ├── index.html         # Default HTML file for testing
+
 │   │   ├── vars/
 │   │   │   ├── main.yml           # Variables for the role (optional)
 │   │   ├── defaults/
