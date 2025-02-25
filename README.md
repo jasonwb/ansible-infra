@@ -7,7 +7,6 @@
 Clone the repository
 
    git clone https://github.com/jasonwb/ansible-infra.git
-   cd ansible-infra
 
 Modify inventory & playbooks as needed
 
