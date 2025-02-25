@@ -1,6 +1,7 @@
 # Ansible Infrastructure Repository Structure
 
 ansible-infra/
+
 │── inventory/
 │   ├── hosts.ini
 │── roles/
