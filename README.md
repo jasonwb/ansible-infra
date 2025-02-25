@@ -1,4 +1,3 @@
-# ansible-infra
 # Ansible Infrastructure Repository Structure
 
 ansible-infra/
