@@ -1,9 +1,9 @@
 # Ansible Infrastructure Repository Structure
 
 ansible-infra/
-│── inventory/         # Inventory files for Ansible
-│   ├── hosts.ini      # Define all servers here
-│── roles/             # Ansible roles for structured playbooks
+│── inventory/
+│   ├── hosts.ini
+│── roles/
 │   ├── webserver/     # Nginx setup
 │   │   ├── tasks/
 │   │   │   ├── main.yml           # Main tasks for installing & configuring Nginx
